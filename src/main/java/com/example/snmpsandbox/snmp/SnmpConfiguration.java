@@ -41,7 +41,7 @@ public class SnmpConfiguration {
                     event.getSecurityModel(), event.getSecurityName(), event.getSecurityLevel(),
                     pdu, event.getMaxSizeResponsePDU(), event.getStateReference(), new StatusInformation());
         } catch (MessageException e) {
-            System.err.println("Error while sending response: " + e.getMessage());
+            log.error("Error while sending response: {}", e.getMessage());
         }
     }
 
